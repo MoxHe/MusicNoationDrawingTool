@@ -96,7 +96,7 @@ public class G{
             for(int i = 1; i < n; i++) {
                 g.drawLine(points[i - 1].x, points[i - 1].y, points[i].x, points[i].y);
             }
-            drawNDots(g,n);
+//            drawNDots(g,n);
         }
         public void drawNDots(Graphics g, int n){
             g.setColor(Color.RED);
