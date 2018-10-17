@@ -12,7 +12,7 @@ public class Layer extends ArrayList<I.Show> implements I.Show{
     public static Layer ALL = new Layer("ALL");
     public Layer(String name){
         this.name = name;
-        if(!name.equals("All")){
+        if(!name.equals("ALL")){
             ALL.add(this);
         }
         byName.put(name, this);
@@ -22,6 +22,12 @@ public class Layer extends ArrayList<I.Show> implements I.Show{
     public void show(Graphics g){
         for (I.Show item : this){
             item.show(g);
+        }
+    }
+
+    public static void nuke(){
+        for(I.Show layer: ALL){
+            ((Layer)layer).clear();
         }
     }
 }

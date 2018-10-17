@@ -3,9 +3,13 @@ package marlin.Reaction;
 import marlin.I;
 import marlin.graphicsLib.G;
 
+import java.util.ArrayList;
+
 public class Gesture {
     public Shape shape;
     public G.VS vs;
+    private static List UNDO = new List();
+
     private Gesture(Shape shape,G.VS vs){
         this.shape = shape;
         this.vs = vs;
@@ -31,13 +35,48 @@ public class Gesture {
             Gesture gesture = Gesture.getNew(ink);
             Ink.BUFFER.clear();
             if(gesture != null){
-                Reaction r = Reaction.best(gesture);
-                if(r != null){
-                    r.act(gesture);
+                if(gesture.shape.name.equals("N-N")){
+                    undo();
+                }else {
+                    gesture.doGestureAndADD();
                 }
             }
         }
     };
 
+    private void doGesture(){
+        //doesn't add to undo
+        Reaction r = Reaction.best(this);
+        if(r != null){
+            r.act(this);
+        }
+    }
+
+    private void doGestureAndADD(){
+        //does add to undo
+        Reaction r = Reaction.best(this);
+        if(r != null){
+            UNDO.add(this);
+            r.act(this);
+        }
+    }
+
+    public static void undo(){
+        if(UNDO.size()>0){
+            UNDO.remove(UNDO.size()-1);
+            Layer.nuke();
+            Reaction.nuke();
+            Reaction.initialActions.act(null);
+            UNDO.redo();
+        }
+    }
+
+    public static  class List extends ArrayList<Gesture>{
+        public void redo(){
+            for(Gesture gesture: this){
+                gesture.doGesture();
+            }
+        }
+    }
 
 }
