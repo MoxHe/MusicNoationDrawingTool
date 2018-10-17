@@ -12,6 +12,6 @@ public class UC {
     public static Color inkColor = Color.BLUE;
     public static final int dotThreshold = 6;
     public static final String shapeDBFileName = "/Users/andaluo/IdeaProjects/marlin2/ShapeDB.bin";
-
+    public static int noBid = 10000;
 
 }

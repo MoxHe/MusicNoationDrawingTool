@@ -4,6 +4,7 @@ import marlin.I;
 import marlin.UC;
 import marlin.graphicsLib.G;
 
+import javax.xml.crypto.Data;
 import java.awt.*;
 import java.io.*;
 import java.rmi.server.ExportException;
@@ -18,21 +19,45 @@ public class Shape implements Serializable {
 
     public Shape(String name){this.name = name;}
 
-    public static HashMap<String, Shape> DB = loadDB();
+    public static class Database extends HashMap<String,Shape>{
+        private Database(){
+            super ();
+            String dot = "DOT";
+            put(dot, new Shape(dot));
+        }
+        private Shape forceShape(String name){
+            if(!DB.containsKey(name)){
+                put(name,new Shape(name));
+            }
+            return DB.get(name);
+        }
+        public void train(String name, Ink.Norm norm){
+            if(isLegal(name)){
+                forceShape(name).prototypes.train(norm);
+            }
+        }
+
+        public static boolean isLegal(String name){
+            return !name.equals("") && !name.equals("DOT");
+        }
+    }
+
+    public static Database DB = loadDB();
     public static Shape DOT = DB.get("DOT");
     public static Collection<Shape> LIST = DB.values();
 
-    public static HashMap<String, Shape> loadDB(){
-        HashMap<String, Shape> res = new HashMap<>();
-        res.put("DOT", new Shape("DOT"));
+    public static Database loadDB(){
+        Database res;
+//        res.put("DOT", new Shape("DOT"));
 //        res.put("1", new Shape("1"));
         try{
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(UC.shapeDBFileName));
-            res = (HashMap<String, Shape>) ois.readObject();
+            res = (Database) ois.readObject();
             System.out.println("Loaded Shape DB.");
         }catch(Exception e){
             System.out.println("Failed loading Shape DB.");
             System.out.println(e);
+            res = new Database();
         }
         return res;
     }
@@ -84,6 +109,15 @@ public class Shape implements Serializable {
                 }
                 return bestSoFar;
             }
+
+            public void train(Ink.Norm norm){
+                if(bestDist(norm) < UC.noMatchDist){
+                    bestMatch.blend(norm);
+                }else{
+                    add(new Shape.Prototype());
+                }
+            }
+
             private static int m = 10, w = 60;
             private static G.VS showBox = new G.VS(m,m,w,w);
             @Override
