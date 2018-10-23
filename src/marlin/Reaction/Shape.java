@@ -85,6 +85,7 @@ public class Shape implements Serializable {
                 bestMatched = s;
             }
         }
+        System.out.println("Saw "+ (bestMatched == null ? "null" :bestMatched.name));
         return bestMatched;
     }
 

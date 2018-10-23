@@ -25,7 +25,7 @@ public class SimpleReaction extends Window {
             public void act(Gesture gesture) {new Box(gesture.vs);}
         });
         G.RND = new Random(SEED);
-        Reaction.initialActions = new I.Act(){
+        Reaction.initialAction = new I.Act(){
             @Override
             public void act(Gesture gesture) {
                 G.RND = new Random(SEED);

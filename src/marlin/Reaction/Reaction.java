@@ -10,7 +10,7 @@ public abstract class Reaction implements I.React{
     public Shape shape;
     public static List initialReactions = new List();
 
-    public static I.Act initialActions = new I.Act(){
+    public static I.Act initialAction = new I.Act(){
         @Override
         public void act(Gesture gesture) {}
     };

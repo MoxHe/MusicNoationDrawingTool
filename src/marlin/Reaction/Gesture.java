@@ -66,7 +66,7 @@ public class Gesture {
             UNDO.remove(UNDO.size()-1);
             Layer.nuke();
             Reaction.nuke();
-            Reaction.initialActions.act(null);
+            Reaction.initialAction.act(null);
             UNDO.redo();
         }
     }
