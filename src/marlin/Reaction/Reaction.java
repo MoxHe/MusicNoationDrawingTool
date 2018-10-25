@@ -12,7 +12,7 @@ public abstract class Reaction implements I.React{
 
     public static I.Act initialAction = new I.Act(){
         @Override
-        public void act(Gesture gesture) {}
+        public void act(Gesture g) {}
     };
 
     private static Map byShapeMap = new Map();

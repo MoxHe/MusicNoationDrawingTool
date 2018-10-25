@@ -25,7 +25,7 @@ public class Music1 extends Window {
     public Music1() {
         super("Music1", UC.screenWidth, UC.screenHeight);
         Reaction.initialAction = new I.Act(){
-            public void act(Gesture gesture) { SYSFMT = null; }
+            public void act(Gesture g) { SYSFMT = null; }
         };
         Reaction.initialReactions.addReaction(new Reaction("E-E"){
             public int bid(Gesture g){
@@ -88,6 +88,7 @@ public class Music1 extends Window {
                 super("BACK");
                 ndx = SYSTEMS.size();
                 SYSTEMS.add(this);
+                makeStaffsMatchSysFmt();
             }
 
             public int yTop(){
@@ -98,7 +99,6 @@ public class Music1 extends Window {
                 return yTop() + SYSFMT.height();
             }
 
-            @Override
             public void show(Graphics g) {
                 SYSFMT.showAt(g,yTop());
                 g.drawLine(PAGE.left,yTop(),PAGE.left,yBot());
@@ -111,6 +111,7 @@ public class Music1 extends Window {
             }
 
             public static class Fmt extends ArrayList<Staff.Fmt> {
+                public int MAXH = UC.defaultStaffLineSpace;
                 public int height(){
                  Staff.Fmt last = get(size()-1);
                  return last.dy + last.height();
@@ -131,6 +132,7 @@ public class Music1 extends Window {
 
             }
         }
+
         public static class Staff extends Mass{
             public Sys sys;
             public int ndx;
@@ -140,17 +142,47 @@ public class Music1 extends Window {
                 this.sys = sys;
                 this.ndx = sys.staffs.size();
                 sys.staffs.add(this);
+                addReaction(new Reaction("S-S") {//creates a bar
+                    public int bid(Gesture g) {
+                        int x= g.vs.midx(), y1 = g.vs.loy(), y2 = g.vs.hiy();
+                        if (x<PAGE.left || x > PAGE.right + UC.barToMarginSnap){ return UC.noBid; }
+                        int dt = Math.abs(y1 - Staff.this.yTop());
+                        int db = Math.abs(y2 - Staff.this.yBot());
+                        if (dt > 15 || db > 15){ return UC.noBid; }
+                        return dt + db + 20;
+                    }
+
+                    public void act(Gesture g) { new Bar(Staff.this.sys, g.vs.midx()); }
+                });
+                addReaction(new Reaction("S-S") { // toggle barContinues
+                    public int bid(Gesture g) {
+                        if (Staff.this.sys.ndx != 0) {return UC.noBid;}
+                        int y1 = g.vs.loy(), y2 = g.vs.hiy();
+                        if (Staff.this.ndx == SYSFMT.size() - 1){ return UC.noBid; }
+                        if (Math.abs(y1-Staff.this.yBot()) > 20){return UC.noBid;}
+                        Staff nextStaff = Staff.this.sys.staffs.get(Staff.this.ndx+1);
+                        if (Math.abs(y2 - nextStaff.yTop()) > 20){return UC.noBid;}
+                        return 10;
+                    }
+                    public void act(Gesture g) {
+                        SYSFMT.get(Staff.this.ndx).toggleBarContinues();
+                    }
+                });
             }
 
-            @Override
-            public void show(Graphics g) {
-
-            }
+            public void show(Graphics g) { }
+            public int yTop(){ return sys.yTop() + SYSFMT.get(ndx).dy; }
+            public int yBot(){ return yTop() + SYSFMT.get(ndx).height(); }
 
             public static class Fmt {
                 public int nLines = 5;
                 public int H = UC.defaultStaffLineSpace;
                 public int dy = 0;
+                public boolean barContinues = false;
+
+                public void toggleBarContinues(){
+                    barContinues = !barContinues;
+                }
 
                 public Fmt(int dy){ this.dy = dy; SYSFMT.add(this);}
 
@@ -166,14 +198,92 @@ public class Music1 extends Window {
         }
 
         public static class Bar extends Mass{
+            public Sys sys;
+            public int x;
+            public static int barType;
+            public static int LEFT = 4, RIGHT = 8;
 
-            public Bar() {
+            public Bar(Sys sys, int x) {
                 super("BACK");
+                this.sys = sys;
+                this.x = x;
+                if (Math.abs(x - PAGE.right) < UC.barToMarginSnap){ this.x = PAGE.right; }
+                this.barType = 0;
+                addReaction(new Reaction("S-S") {//cycling the barType
+                    public int bid(Gesture g) {
+                        int x = g.vs.midx(), y1 = g.vs.loy(), y2 = g.vs.hiy();
+                        if (Math.abs(x - Bar.this.x) > UC.barToMarginSnap){ return UC.noBid; }
+                        if (y1 < Bar.this.sys.yTop() - 20){ return UC.noBid; }
+                        if (y2 > Bar.this.sys.yBot() + 20){ return UC.noBid; }
+                        return Math.abs(x - Bar.this.x);
+                    }
+                    public void act(Gesture g) {
+                        Bar.this.cycleType();
+                    }
+                });
             }
 
-            @Override
-            public void show(Graphics g) {
+            public void cycleType(){
+                barType++;
+                if(barType > 2){ barType = 0; }
+            }
+            public void toggleLeft(){ barType = barType^LEFT;}
+            public void toggleRight(){ barType = barType^RIGHT;}
 
+            public void show(Graphics g) {
+                int yTop = sys.yTop(), y1 = 0, y2 = 0;
+                boolean justSawBreak = true;
+                for (Staff.Fmt sf: SYSFMT){
+                    int top = yTop + sf.dy;
+                    int bot = top + sf.height();
+                    if (justSawBreak){ y1 = top;}
+                    justSawBreak = !sf.barContinues;
+                    if (justSawBreak){drawLines(g,x,y1,bot);}
+                    if (barType > 3){ drawDots(g,x,top); }
+                }
+            }
+
+            public static void wings(Graphics g, int x, int y1, int y2, int dx, int dy){
+                g.drawLine(x,y1,x+dx,y1-dy);
+                g.drawLine(x,y2,x+dx,y2+dy);
+            }
+
+            public static void fatBar(Graphics g, int x, int y1, int y2, int dx){
+                g.fillRect(x,y1,dx,y2-y1);
+            }
+
+            public static void thinBar(Graphics g, int x, int y1, int y2){
+                g.drawLine(x,y1,x,y2);
+            }
+
+            public static void drawDots(Graphics g, int x, int top){
+                int H = SYSFMT.MAXH;
+                if((barType & LEFT)!=0){
+                    g.fillOval(x-3*H,top + 11*H/4,H/2,H/2);
+                    g.fillOval(x-3*H,top + 19*H/4,H/2,H/2);
+                }
+                if((barType & RIGHT)!=0){
+                    g.fillOval(x+3*H,top + 11*H/4,H/2,H/2);
+                    g.fillOval(x+3*H,top + 19*H/4,H/2,H/2);
+                }
+            }
+
+            public void drawLines(Graphics g, int x, int y1, int y2){//draw vertical stuff
+                int H = SYSFMT.MAXH;
+                if (barType == 0){ thinBar(g,x,y1,y2); }
+                if (barType == 1){ thinBar(g,x,y1,y2);thinBar(g,x-H,y1,y2); }
+                if (barType == 2){ fatBar(g,x-H,y1,y2,H); thinBar(g,x-H*2,y1,y2);}
+                if (barType == 4){
+                    fatBar(g,x-H,y1,y2,H);
+                    if ((barType & LEFT) != 0){
+                        thinBar(g,x-H*2,y1,y2);
+                        wings(g,x-2*H,y1,y2,-H,H);
+                    }
+                    if ((barType & RIGHT) != 0){
+                        thinBar(g,x+H,y1,y2);
+                        wings(g,x+H,y1,y2,-H,H);
+                    }
+                }
             }
         }
 

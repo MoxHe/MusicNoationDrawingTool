@@ -20,14 +20,14 @@ public class SimpleReaction extends Window {
         super("SimpleReaction", UC.screenWidth,UC.screenHeight);
         Reaction.initialReactions.addReaction(new Reaction("SW-SW"){
             @Override
-            public int bid(Gesture gesture) { return 0;}
+            public int bid(Gesture g) { return 0;}
             @Override
-            public void act(Gesture gesture) {new Box(gesture.vs);}
+            public void act(Gesture g) {new Box(g.vs);}
         });
         G.RND = new Random(SEED);
         Reaction.initialAction = new I.Act(){
             @Override
-            public void act(Gesture gesture) {
+            public void act(Gesture g) {
                 G.RND = new Random(SEED);
             }
         };
@@ -59,9 +59,9 @@ public class SimpleReaction extends Window {
             this.vs = vs;
             addReaction(new Reaction("S-S") {
                 @Override
-                public int bid(Gesture gesture) {
-                    int x = gesture.vs.midx();
-                    int y = gesture.vs.loy();
+                public int bid(Gesture g) {
+                    int x = g.vs.midx();
+                    int y = g.vs.loy();
                     if (Box.this.vs.hit(x,y)){
                         return Math.abs(x-Box.this.vs.midx());
                     }else{
@@ -70,16 +70,16 @@ public class SimpleReaction extends Window {
                 }
 
                 @Override
-                public void act(Gesture gesture) {
+                public void act(Gesture g) {
                     Box.this.delete();
                 }
             });
 
             addReaction(new Reaction("DOT") {
                 @Override
-                public int bid(Gesture gesture) {
-                    int x = gesture.vs.midx();
-                    int y = gesture.vs.loy();
+                public int bid(Gesture g) {
+                    int x = g.vs.midx();
+                    int y = g.vs.loy();
                     if (Box.this.vs.hit(x,y)){
                         return Math.abs(x-Box.this.vs.midx());
                     }else{
@@ -88,7 +88,7 @@ public class SimpleReaction extends Window {
                 }
 
                 @Override
-                public void act(Gesture gesture) {
+                public void act(Gesture g) {
                     c = G.rndColor();
                 }
             });

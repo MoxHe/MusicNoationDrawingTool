@@ -14,4 +14,7 @@ public class UC {
     public static final String shapeDBFileName = "/Users/andaluo/IdeaProjects/marlin2/ShapeDB.bin";
     public static int noBid = 10000;
     public static int defaultStaffLineSpace = 8;
+    public static int barToMarginSnap = 20;
+
+
 }
