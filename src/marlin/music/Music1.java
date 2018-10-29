@@ -1,4 +1,4 @@
-package marlin.Sandbox;
+package marlin.music;
 
 import marlin.I;
 import marlin.Reaction.*;
@@ -70,6 +70,9 @@ public class Music1 extends Window {
         g.setColor(Color.BLACK);
         Ink.BUFFER.show(g);
         Layer.ALL.show(g);
+        int h = 8;
+        Glyph.CLEF_G.showAt(g, h, 100, PAGE.top + 4*h);
+        Glyph.HEAD_Q.showAt(g, h, 200, PAGE.top + 4*h);
     }
 
     public void mousePressed(MouseEvent me){ Gesture.AREA.dn(me.getX(),me.getY());repaint(); }
@@ -136,6 +139,7 @@ public class Music1 extends Window {
         public static class Staff extends Mass{
             public Sys sys;
             public int ndx;
+            public int H(){return SYSFMT.get(ndx).H;}
 
             public Staff(Sys sys) {
                 super("BACK");
@@ -154,6 +158,7 @@ public class Music1 extends Window {
 
                     public void act(Gesture g) { new Bar(Staff.this.sys, g.vs.midx()); }
                 });
+
                 addReaction(new Reaction("S-S") { // toggle barContinues
                     public int bid(Gesture g) {
                         if (Staff.this.sys.ndx != 0) {return UC.noBid;}
@@ -166,6 +171,21 @@ public class Music1 extends Window {
                     }
                     public void act(Gesture g) {
                         SYSFMT.get(Staff.this.ndx).toggleBarContinues();
+                    }
+                });
+
+                addReaction(new Reaction("SW-SW") {
+                    public int bid(Gesture g) {
+                        int x = g.vs.midx();
+                        int y = g.vs.midy();
+                        if(x < PAGE.left || x > PAGE.right){return UC.noBid;}
+                        int top = Staff.this.yTop();
+                        int bot = Staff.this.yBot();
+                        if (y < top || y > bot){return UC.noBid;}
+                        return 20;
+                    }
+                    public void act(Gesture g) {
+                        new Head(Staff.this, g.vs.midx(), g.vs.midy());
                     }
                 });
             }
@@ -221,14 +241,32 @@ public class Music1 extends Window {
                         Bar.this.cycleType();
                     }
                 });
+
+                addReaction(new Reaction("DOT"){ // Dot this Bar
+                    public int bid(Gesture g){
+                        int x = g.vs.midx(); int y = g.vs.midy();
+                        if(y < Bar.this.sys.yTop() || y > Bar.this.sys.yBot()){return UC.noBid;}
+                        int dist = Math.abs(x - Bar.this.x);
+                        if(dist > 3*SYSFMT.MAXH){return UC.noBid;}
+                        return dist;
+                    }
+                    public void act(Gesture g){
+                        if(g.vs.midx() < Bar.this.x){Bar.this.toggleLeft();} else {Bar.this.toggleRight();}
+                    }
+                });
             }
 
             public void cycleType(){
                 barType++;
                 if(barType > 2){ barType = 0; }
             }
+
+
             public void toggleLeft(){ barType = barType^LEFT;}
             public void toggleRight(){ barType = barType^RIGHT;}
+
+
+
 
             public void show(Graphics g) {
                 int yTop = sys.yTop(), y1 = 0, y2 = 0;
@@ -256,33 +294,29 @@ public class Music1 extends Window {
                 g.drawLine(x,y1,x,y2);
             }
 
-            public static void drawDots(Graphics g, int x, int top){
+
+
+            public void drawLines(Graphics g, int x, int y1, int y2){
                 int H = SYSFMT.MAXH;
-                if((barType & LEFT)!=0){
-                    g.fillOval(x-3*H,top + 11*H/4,H/2,H/2);
-                    g.fillOval(x-3*H,top + 19*H/4,H/2,H/2);
-                }
-                if((barType & RIGHT)!=0){
-                    g.fillOval(x+3*H,top + 11*H/4,H/2,H/2);
-                    g.fillOval(x+3*H,top + 19*H/4,H/2,H/2);
+                if(barType == 0){ thinBar(g, x, y1, y2);}
+                if(barType == 1){ thinBar(g, x, y1, y2); thinBar(g, x-H, y1, y2);}
+                if(barType == 2){ fatBar(g, x-H, y1, y2, H); thinBar(g, x-2*H, y1, y2);}
+                if(barType >= 4){ fatBar(g, x-H, y1, y2, H); // all repeats have fat bar
+                    if((barType&LEFT) != 0){thinBar(g, x-2*H, y1, y2); wings(g, x-2*H, y1, y2, -H, H);}
+                    if((barType&RIGHT) != 0){thinBar(g, x+H, y1, y2); wings(g, x+H, y1, y2, H, H);}
                 }
             }
-
-            public void drawLines(Graphics g, int x, int y1, int y2){//draw vertical stuff
+            public void drawDots(Graphics g, int x, int top){ // from top of single staff
+                // notice - this code ASSUMES nLine is 5. We will need to fix if we ever allow
+                // not-standard staffs.
                 int H = SYSFMT.MAXH;
-                if (barType == 0){ thinBar(g,x,y1,y2); }
-                if (barType == 1){ thinBar(g,x,y1,y2);thinBar(g,x-H,y1,y2); }
-                if (barType == 2){ fatBar(g,x-H,y1,y2,H); thinBar(g,x-H*2,y1,y2);}
-                if (barType == 4){
-                    fatBar(g,x-H,y1,y2,H);
-                    if ((barType & LEFT) != 0){
-                        thinBar(g,x-H*2,y1,y2);
-                        wings(g,x-2*H,y1,y2,-H,H);
-                    }
-                    if ((barType & RIGHT) != 0){
-                        thinBar(g,x+H,y1,y2);
-                        wings(g,x+H,y1,y2,-H,H);
-                    }
+                if((barType & LEFT) != 0){
+                    g.fillOval(x-3*H, top+11*H/4, H/2, H/2);
+                    g.fillOval(x-3*H, top+19*H/4, H/2, H/2);
+                }
+                if((barType & RIGHT) != 0){
+                    g.fillOval(x+3*H/2, top+11*H/4, H/2, H/2);
+                    g.fillOval(x+3*H/2, top+19*H/4, H/2, H/2);
                 }
             }
         }
@@ -294,7 +328,24 @@ public class Music1 extends Window {
             public int bot = UC.screenHeight - M;
             public int right = UC.screenWidth - M;
             public int sysGap = 0;
+        }
 
+        public static class Head extends Mass{
+            public Staff staff;
+            public int x, line;
+            public Head(Staff staff, int x, int y){
+                super("NOTE");
+                this.staff = staff;
+                this.x = x;
+                int h = staff.H();
+                this.line = (y - staff.yTop() + h/2)/h;
+                System.out.println("line equals" + this.line);
+            }
+
+            public void show(Graphics g) {
+                int h = staff.H();
+                Glyph.HEAD_Q.showAt(g, h, x,line*h + staff.yTop());
+            }
 
         }
     }

@@ -1,8 +1,5 @@
-import marlin.Sandbox.Music1;
-import marlin.Sandbox.ShapeTrainer;
-import marlin.Sandbox.SimpleReaction;
+import marlin.music.Music1;
 import marlin.graphicsLib.Window;
-import marlin.Sandbox.PaintInk;
 
 public class Main {
     public static void main(String[] args){
