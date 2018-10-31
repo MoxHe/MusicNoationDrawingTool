@@ -16,6 +16,6 @@ public class UC {
     public static int defaultStaffLineSpace = 8;
     public static int barToMarginSnap = 20;
     public static String FontName = "sinfonia";
-
+    public static int snapTime = 20;
 
 }

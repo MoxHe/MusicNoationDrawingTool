@@ -70,9 +70,10 @@ public class Music1 extends Window {
         g.setColor(Color.BLACK);
         Ink.BUFFER.show(g);
         Layer.ALL.show(g);
-        int h = 8;
-        Glyph.CLEF_G.showAt(g, h, 100, PAGE.top + 4*h);
-        Glyph.HEAD_Q.showAt(g, h, 200, PAGE.top + 4*h);
+//        int H = 32;
+//        Glyph.CLEF_G.showAt(g, H, 100, PAGE.top + 4*H);
+//        Glyph.HEAD_Q.showAt(g, H, 180, PAGE.top + 4*H);
+//        g.drawRect(180, PAGE.top + 3*H, 24*H/10, 2*H);
     }
 
     public void mousePressed(MouseEvent me){ Gesture.AREA.dn(me.getX(),me.getY());repaint(); }
@@ -85,6 +86,8 @@ public class Music1 extends Window {
         public static class Sys extends Mass {
             public ArrayList<Staff> staffs = new ArrayList<>();
 
+            Time.List times;
+
             public int ndx;
 
             public Sys() {
@@ -92,7 +95,10 @@ public class Music1 extends Window {
                 ndx = SYSTEMS.size();
                 SYSTEMS.add(this);
                 makeStaffsMatchSysFmt();
+                times = new Time.List(this);
             }
+
+            public Time getTime(int x){ return times.getTime(x); }
 
             public int yTop(){
                 return PAGE.top + ndx*(SYSFMT.height() + PAGE.sysGap);
@@ -330,13 +336,47 @@ public class Music1 extends Window {
             public int sysGap = 0;
         }
 
+        public static class Time {
+            public int x;
+            private Time(int x, Sys sys){ this.x = x; sys.times.add(this); }
+            public static class List extends ArrayList<Time>{
+                public Sys sys;
+                public List(Sys sys){ this.sys = sys; }
+
+                public Time getTime(int x){
+                    if(size() == 0){ return new Time(x, sys); }
+                    Time t = getClosestTime(x);
+                    if(Math.abs(x - t.x) < UC.snapTime){
+                        return t;
+                    }
+                    else{
+                        return new Time(x, sys);
+                    }
+                }
+
+                public Time getClosestTime(int x){
+                    Time result = get(0);
+                    int bestSoFar = Math.abs(x - result.x);
+                    for (Time t: this){
+                        int dist = Math.abs(x - t.x);
+                        if(dist < bestSoFar){
+                            bestSoFar = dist;
+                            result = t;
+                        }
+                    }
+                    return result;
+                }
+            }
+        }
+
         public static class Head extends Mass{
             public Staff staff;
-            public int x, line;
+            public int line;
+            public Time time;
             public Head(Staff staff, int x, int y){
                 super("NOTE");
                 this.staff = staff;
-                this.x = x;
+                this.time = staff.sys.getTime(x);
                 int h = staff.H();
                 this.line = (y - staff.yTop() + h/2)/h;
                 System.out.println("line equals" + this.line);
@@ -344,7 +384,11 @@ public class Music1 extends Window {
 
             public void show(Graphics g) {
                 int h = staff.H();
-                Glyph.HEAD_Q.showAt(g, h, x,line*h + staff.yTop());
+                Glyph.HEAD_Q.showAt(g, h, time.x,line*h + staff.yTop());
+            }
+
+            public int W(){
+                return (25*staff.H())/10;
             }
 
         }

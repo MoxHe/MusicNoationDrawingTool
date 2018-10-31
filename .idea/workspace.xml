@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="951ff780-8a2a-48e8-ac64-e438ff6f6d08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/marlin/music/Glyph.java" afterDir="false" />
+    <list default="true" id="951ff780-8a2a-48e8-ac64-e438ff6f6d08" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Bar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Bar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Staff$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Staff$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Staff$Fmt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Staff.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Sys$Fmt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music$Sys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1$Music.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Music1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/Music1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/music/Music1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Glyph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Glyph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Head.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Head.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$Fmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$Fmt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys$Fmt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys$Fmt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/marlin/UC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/UC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/marlin/music/Glyph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/music/Glyph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/marlin/music/Music1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/music/Music1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +38,8 @@
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="7" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.5" value="8" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -56,12 +56,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="25289" />
+          <entry key="java" value="26241" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="25289" />
+          <entry key="JAVA" value="26241" />
+          <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -71,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/marlin/UC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+            <state relative-caret-position="270">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -92,14 +94,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/marlin/music/Music1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1094">
-              <caret line="351" column="1" lean-forward="true" selection-start-line="351" selection-start-column="1" selection-end-line="351" selection-end-column="1" />
+            <state relative-caret-position="209">
+              <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5848#5849#0" expanded="true" />
-                <element signature="e#5943#5944#0" expanded="true" />
-                <element signature="e#6695#6696#0" expanded="true" />
-                <element signature="e#6752#6753#0" expanded="true" />
+                <element signature="e#13121#13122#0" expanded="true" />
+                <element signature="e#13162#13163#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/marlin/music/Glyph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,7 +120,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/marlin/Reaction/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
+            <state relative-caret-position="1110">
               <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -200,6 +200,10 @@
       <find>Bar</find>
       <find>Staff</find>
       <find>addRea</find>
+      <find>paintCom</find>
+      <find>HEAD</find>
+      <find>Sys</find>
+      <find>getTime</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -234,11 +238,17 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/marlin/I.java" />
         <option value="$PROJECT_DIR$/src/marlin/Sandbox/Music1.java" />
-        <option value="$PROJECT_DIR$/src/marlin/UC.java" />
         <option value="$PROJECT_DIR$/src/marlin/music/Glyph.java" />
+        <option value="$PROJECT_DIR$/src/marlin/UC.java" />
         <option value="$PROJECT_DIR$/src/marlin/music/Music1.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="718" />
@@ -250,6 +260,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,7 +311,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -371,7 +381,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12947068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13090129" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -380,15 +390,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" weight="0.15301205" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49642345" visible="true" weight="0.15301205" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50214595" side_tool="true" visible="true" weight="0.15301205" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5035765" side_tool="true" visible="true" weight="0.15301205" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49928468" weight="0.32771084" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4985694" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -396,7 +406,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3297568" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11821086" />
@@ -429,6 +439,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Component.java">
@@ -533,10 +547,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sinfonia.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/marlin/Sandbox/SimpleReaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/marlin/Reaction/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -577,46 +604,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/marlin/Reaction/Shape.java">
+    <entry file="file://$PROJECT_DIR$/src/marlin/music/Glyph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sinfonia.ttf">
-      <provider selected="true" editor-type-id="fontseditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/marlin/UC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/marlin/music/Glyph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/marlin/music/Music1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1094">
-          <caret line="351" column="1" lean-forward="true" selection-start-line="351" selection-start-column="1" selection-end-line="351" selection-end-column="1" />
+        <state relative-caret-position="209">
+          <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5848#5849#0" expanded="true" />
-            <element signature="e#5943#5944#0" expanded="true" />
-            <element signature="e#6695#6696#0" expanded="true" />
-            <element signature="e#6752#6753#0" expanded="true" />
+            <element signature="e#13121#13122#0" expanded="true" />
+            <element signature="e#13162#13163#0" expanded="true" />
           </folding>
         </state>
       </provider>
