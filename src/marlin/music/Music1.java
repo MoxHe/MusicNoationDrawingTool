@@ -70,7 +70,7 @@ public class Music1 extends Window {
         g.setColor(Color.BLACK);
         Ink.BUFFER.show(g);
         Layer.ALL.show(g);
-//        int H = 32;
+//        int H = 8;
 //        Glyph.CLEF_G.showAt(g, H, 100, PAGE.top + 4*H);
 //        Glyph.HEAD_Q.showAt(g, H, 180, PAGE.top + 4*H);
 //        g.drawRect(180, PAGE.top + 3*H, 24*H/10, 2*H);
@@ -194,11 +194,29 @@ public class Music1 extends Window {
                         new Head(Staff.this, g.vs.midx(), g.vs.midy());
                     }
                 });
+
+                addReaction(new Reaction("E-S") {
+                    public int bid(Gesture g) {
+                        int x = g.vs.midx();
+                        int y = g.vs.midy();
+                        if(x < PAGE.left || x > PAGE.right){return UC.noBid;}
+                        int top = Staff.this.yTop();
+                        int bot = Staff.this.yBot();
+                        if (y < top || y > bot){return UC.noBid;}
+                        return 20;
+                    }
+
+                    public void act(Gesture g) {
+                        (new Rest(Staff.this, Staff.this.sys.getTime(g.vs.midx()))).nFlags++;
+                    }
+                });
             }
 
             public void show(Graphics g) { }
             public int yTop(){ return sys.yTop() + SYSFMT.get(ndx).dy; }
             public int yBot(){ return yTop() + SYSFMT.get(ndx).height(); }
+            public int yLine(int line){return yTop() + line*H();}
+
 
             public static class Fmt {
                 public int nLines = 5;
@@ -365,6 +383,88 @@ public class Music1 extends Window {
                         }
                     }
                     return result;
+                }
+            }
+        }
+
+        public static abstract class Duration extends Mass{
+            public Time time;
+            public int nFlags = 0, nDot = 0;
+            public Duration(Time time){
+                super("NOTE");
+                this.time = time;
+            }
+            public abstract void show(Graphics g);
+            public void incFlag(){if(nFlags < 4){nFlags++;}}
+            public void decFlag(){if(nFlags > -2){nFlags--;}}
+            public void cycleDot(){nDot++; if(nDot > 3){nDot = 0;}}
+        }
+
+        public static class Rest extends Duration{
+            public Staff staff;
+            public int line = 4;
+            public Rest(Staff staff, Time t){
+                super(t);
+                this.staff = staff;
+
+                addReaction(new Reaction("E-E") {
+                    public int bid(Gesture g) {
+                        int y = g.vs.midy();
+                        int x1 = g.vs.lox();
+                        int x2 = g.vs.hix();
+                        int x = Rest.this.time.x;
+                        if (x1 > x || x2 < x){return UC.noBid;}
+                        return Math.abs(y - Rest.this.staff.yLine(4));
+                    }
+
+                    public void act(Gesture g) {
+                        Rest.this.incFlag();
+                    }
+                });
+
+                addReaction(new Reaction("W-W") {
+                    public int bid(Gesture g) {
+                        int y = g.vs.midy();
+                        int x1 = g.vs.lox();
+                        int x2 = g.vs.hix();
+                        int x = Rest.this.time.x;
+                        if (x1 > x || x2 < x){return UC.noBid;}
+                        return Math.abs(y - Rest.this.staff.yLine(4));
+                    }
+
+                    public void act(Gesture g) {
+                        Rest.this.decFlag();
+                    }
+                });
+
+                addReaction(new Reaction("DOT") {
+                    public int bid(Gesture g) {
+                        int y = g.vs.midy();
+                        int x = g.vs.midx();
+                        int yR = Rest.this.staff.yLine(4);
+                        int xR = Rest.this.time.x;
+                        if (x < xR + 2 || x > xR + 30 || y < yR - 30 || y > yR +30){return UC.noBid;}
+                        return Math.abs(y - yR) + Math.abs(x - xR);
+                    }
+
+                    public void act(Gesture g) {
+                        Rest.this.cycleDot();
+                    }
+                });
+            }
+            public void show(Graphics g) {
+                int h = staff.H();
+                int top = staff.yTop();
+                int y = top + line*h;
+                if(nFlags == -2){ Glyph.REST_W.showAt(g, h, time.x,y); }
+                if(nFlags == -1){ Glyph.REST_H.showAt(g, h, time.x,y); }
+                if(nFlags == 0){ Glyph.REST_Q.showAt(g, h, time.x,y); }
+                if(nFlags == 1){ Glyph.REST_1F.showAt(g, h, time.x,y); }
+                if(nFlags == 2){ Glyph.REST_2F.showAt(g, h, time.x,y); }
+                if(nFlags == 3){ Glyph.REST_3F.showAt(g, h, time.x,y); }
+                if(nFlags == 4){ Glyph.REST_4F.showAt(g, h, time.x,y); }
+                for (int i = 0; i < nDot; i++){
+                    g.fillOval(time.x + i*8 + 30, y-3*h/2, h/2, h/2);
                 }
             }
         }
