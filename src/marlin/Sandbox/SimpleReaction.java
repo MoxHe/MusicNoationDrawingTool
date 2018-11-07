@@ -60,10 +60,10 @@ public class SimpleReaction extends Window {
             addReaction(new Reaction("S-S") {
                 @Override
                 public int bid(Gesture g) {
-                    int x = g.vs.midx();
-                    int y = g.vs.loy();
+                    int x = g.vs.xMid();
+                    int y = g.vs.yLow();
                     if (Box.this.vs.hit(x,y)){
-                        return Math.abs(x-Box.this.vs.midx());
+                        return Math.abs(x-Box.this.vs.xMid());
                     }else{
                         return UC.noBid;
                     }
@@ -71,17 +71,17 @@ public class SimpleReaction extends Window {
 
                 @Override
                 public void act(Gesture g) {
-                    Box.this.delete();
+                    Box.this.deleteMass();
                 }
             });
 
             addReaction(new Reaction("DOT") {
                 @Override
                 public int bid(Gesture g) {
-                    int x = g.vs.midx();
-                    int y = g.vs.loy();
+                    int x = g.vs.xMid();
+                    int y = g.vs.yLow();
                     if (Box.this.vs.hit(x,y)){
-                        return Math.abs(x-Box.this.vs.midx());
+                        return Math.abs(x-Box.this.vs.xMid());
                     }else{
                         return UC.noBid;
                     }

@@ -96,10 +96,10 @@ public class Squares extends Window implements ActionListener {
         public Square(int x,int y){super(x,y,100,100);}
         public void moveAndBounce(){
             loc.add(dv);
-            if(lox() < 0 && dv.x <0){dv.x = -dv.x;}
-            if(loy() < 0 && dv.y <0){dv.y = -dv.y;}
-            if(hix() > 1000 && dv.x >0){dv.x = -dv.x;}
-            if(hiy() > 800 && dv.y >0){dv.y = -dv.y;}
+            if(xLow() < 0 && dv.x <0){dv.x = -dv.x;}
+            if(yLow() < 0 && dv.y <0){dv.y = -dv.y;}
+            if(xHi() > 1000 && dv.x >0){dv.x = -dv.x;}
+            if(yHi() > 800 && dv.y >0){dv.y = -dv.y;}
         }
 
         public void draw(Graphics g){fill(g,c);moveAndBounce();}

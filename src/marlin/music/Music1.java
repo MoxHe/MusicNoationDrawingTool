@@ -9,6 +9,7 @@ import marlin.graphicsLib.Window;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Music1 extends Window {
 
@@ -30,12 +31,12 @@ public class Music1 extends Window {
         Reaction.initialReactions.addReaction(new Reaction("E-E"){
             public int bid(Gesture g){
                 if(SYSFMT == null){ return 0; }
-                int y = g.vs.midy();
+                int y = g.vs.yMid();
                 if (y > PAGE.top + SYSFMT.height() + 15){ return 100; }
                     else{ return UC.noBid; }
             }
             public void act(Gesture g){
-                int y = g.vs.midy();
+                int y = g.vs.yMid();
                 if (SYSFMT == null){
                     PAGE.top = y;
                     SYSFMT = new Music.Sys.Fmt();
@@ -49,14 +50,14 @@ public class Music1 extends Window {
             @Override
             public int bid(Gesture g) {
                 if (SYSFMT ==null){ return UC.noBid; }
-                int y = g.vs.midy();
+                int y = g.vs.yMid();
                 if (y > SYSTEMS.get(SYSTEMS.size()-1).yBot() + 15){ return  100; }
                 return UC.noBid;
             }
 
             @Override
             public void act(Gesture g) {
-                int y = g.vs.midy();
+                int y = g.vs.yMid();
                 if(SYSTEMS.size() == 1){
                     PAGE.sysGap = y - (PAGE.top + SYSFMT.height());
                 }
@@ -154,7 +155,7 @@ public class Music1 extends Window {
                 sys.staffs.add(this);
                 addReaction(new Reaction("S-S") {//creates a bar
                     public int bid(Gesture g) {
-                        int x= g.vs.midx(), y1 = g.vs.loy(), y2 = g.vs.hiy();
+                        int x= g.vs.xMid(), y1 = g.vs.yLow(), y2 = g.vs.yHi();
                         if (x<PAGE.left || x > PAGE.right + UC.barToMarginSnap){ return UC.noBid; }
                         int dt = Math.abs(y1 - Staff.this.yTop());
                         int db = Math.abs(y2 - Staff.this.yBot());
@@ -162,13 +163,13 @@ public class Music1 extends Window {
                         return dt + db + 20;
                     }
 
-                    public void act(Gesture g) { new Bar(Staff.this.sys, g.vs.midx()); }
+                    public void act(Gesture g) { new Bar(Staff.this.sys, g.vs.xMid()); }
                 });
 
                 addReaction(new Reaction("S-S") { // toggle barContinues
                     public int bid(Gesture g) {
                         if (Staff.this.sys.ndx != 0) {return UC.noBid;}
-                        int y1 = g.vs.loy(), y2 = g.vs.hiy();
+                        int y1 = g.vs.yLow(), y2 = g.vs.yHi();
                         if (Staff.this.ndx == SYSFMT.size() - 1){ return UC.noBid; }
                         if (Math.abs(y1-Staff.this.yBot()) > 20){return UC.noBid;}
                         Staff nextStaff = Staff.this.sys.staffs.get(Staff.this.ndx+1);
@@ -182,8 +183,8 @@ public class Music1 extends Window {
 
                 addReaction(new Reaction("SW-SW") {
                     public int bid(Gesture g) {
-                        int x = g.vs.midx();
-                        int y = g.vs.midy();
+                        int x = g.vs.xMid();
+                        int y = g.vs.yMid();
                         if(x < PAGE.left || x > PAGE.right){return UC.noBid;}
                         int top = Staff.this.yTop();
                         int bot = Staff.this.yBot();
@@ -191,14 +192,14 @@ public class Music1 extends Window {
                         return 20;
                     }
                     public void act(Gesture g) {
-                        new Head(Staff.this, g.vs.midx(), g.vs.midy());
+                        new Head(Staff.this, g.vs.xMid(), g.vs.yMid());
                     }
                 });
 
                 addReaction(new Reaction("E-S") {
                     public int bid(Gesture g) {
-                        int x = g.vs.midx();
-                        int y = g.vs.midy();
+                        int x = g.vs.xMid();
+                        int y = g.vs.yMid();
                         if(x < PAGE.left || x > PAGE.right){return UC.noBid;}
                         int top = Staff.this.yTop();
                         int bot = Staff.this.yBot();
@@ -207,7 +208,7 @@ public class Music1 extends Window {
                     }
 
                     public void act(Gesture g) {
-                        (new Rest(Staff.this, Staff.this.sys.getTime(g.vs.midx()))).nFlags++;
+                        (new Rest(Staff.this, Staff.this.sys.getTime(g.vs.xMid()))).nFlags++;
                     }
                 });
             }
@@ -255,7 +256,7 @@ public class Music1 extends Window {
                 this.barType = 0;
                 addReaction(new Reaction("S-S") {//cycling the barType
                     public int bid(Gesture g) {
-                        int x = g.vs.midx(), y1 = g.vs.loy(), y2 = g.vs.hiy();
+                        int x = g.vs.xMid(), y1 = g.vs.yLow(), y2 = g.vs.yHi();
                         if (Math.abs(x - Bar.this.x) > UC.barToMarginSnap){ return UC.noBid; }
                         if (y1 < Bar.this.sys.yTop() - 20){ return UC.noBid; }
                         if (y2 > Bar.this.sys.yBot() + 20){ return UC.noBid; }
@@ -268,14 +269,14 @@ public class Music1 extends Window {
 
                 addReaction(new Reaction("DOT"){ // Dot this Bar
                     public int bid(Gesture g){
-                        int x = g.vs.midx(); int y = g.vs.midy();
+                        int x = g.vs.xMid(); int y = g.vs.yMid();
                         if(y < Bar.this.sys.yTop() || y > Bar.this.sys.yBot()){return UC.noBid;}
                         int dist = Math.abs(x - Bar.this.x);
                         if(dist > 3*SYSFMT.MAXH){return UC.noBid;}
                         return dist;
                     }
                     public void act(Gesture g){
-                        if(g.vs.midx() < Bar.this.x){Bar.this.toggleLeft();} else {Bar.this.toggleRight();}
+                        if(g.vs.xMid() < Bar.this.x){Bar.this.toggleLeft();} else {Bar.this.toggleRight();}
                     }
                 });
             }
@@ -356,7 +357,30 @@ public class Music1 extends Window {
 
         public static class Time {
             public int x;
+            public ArrayList<Head> heads = new ArrayList<>();
+
             private Time(int x, Sys sys){ this.x = x; sys.times.add(this); }
+
+            public void stemHeads(Staff staff, boolean up, int y1, int y2){
+                Stem s = new Stem(staff, up, this);
+                for (Head h: heads){
+                    int y = h.y();
+                    if (y > y1 && y < y2){ h.joinStem(s); }
+                }
+                if (s.heads.size() == 0){
+                    s.deleteMass();
+                } else{
+                    s.setWrongSide();
+                }
+            }
+
+            public void unStemHeads(int y1, int y2){
+                for (Head h: heads){
+                    int y = h.y();
+                    if (y > y1 && y < y2){ h.unStem(); }
+                }
+            }
+
             public static class List extends ArrayList<Time>{
                 public Sys sys;
                 public List(Sys sys){ this.sys = sys; }
@@ -409,9 +433,9 @@ public class Music1 extends Window {
 
                 addReaction(new Reaction("E-E") {
                     public int bid(Gesture g) {
-                        int y = g.vs.midy();
-                        int x1 = g.vs.lox();
-                        int x2 = g.vs.hix();
+                        int y = g.vs.yMid();
+                        int x1 = g.vs.xLow();
+                        int x2 = g.vs.xHi();
                         int x = Rest.this.time.x;
                         if (x1 > x || x2 < x){return UC.noBid;}
                         return Math.abs(y - Rest.this.staff.yLine(4));
@@ -424,9 +448,9 @@ public class Music1 extends Window {
 
                 addReaction(new Reaction("W-W") {
                     public int bid(Gesture g) {
-                        int y = g.vs.midy();
-                        int x1 = g.vs.lox();
-                        int x2 = g.vs.hix();
+                        int y = g.vs.yMid();
+                        int x1 = g.vs.xLow();
+                        int x2 = g.vs.xHi();
                         int x = Rest.this.time.x;
                         if (x1 > x || x2 < x){return UC.noBid;}
                         return Math.abs(y - Rest.this.staff.yLine(4));
@@ -439,8 +463,8 @@ public class Music1 extends Window {
 
                 addReaction(new Reaction("DOT") {
                     public int bid(Gesture g) {
-                        int y = g.vs.midy();
-                        int x = g.vs.midx();
+                        int y = g.vs.yMid();
+                        int x = g.vs.xMid();
                         int yR = Rest.this.staff.yLine(4);
                         int xR = Rest.this.time.x;
                         if (x < xR + 2 || x > xR + 30 || y < yR - 30 || y > yR +30){return UC.noBid;}
@@ -469,26 +493,176 @@ public class Music1 extends Window {
             }
         }
 
-        public static class Head extends Mass{
+        public static class Head extends Mass implements Comparable<Head>{
             public Staff staff;
             public int line;
             public Time time;
+            public Stem stem = null;
+            public boolean wrongSide = false;
+            public Glyph forcedGlyph = null;
+
             public Head(Staff staff, int x, int y){
                 super("NOTE");
                 this.staff = staff;
                 this.time = staff.sys.getTime(x);
+                time.heads.add(this);
                 int h = staff.H();
                 this.line = (y - staff.yTop() + h/2)/h;
-                System.out.println("line equals" + this.line);
+                System.out.println("line = " + line);
+
+                addReaction(new Reaction("S-S") {
+                    public int bid(Gesture g) {
+                        int x = g.vs.xMid(), y1 = g.vs.yLow(), y2 = g.vs.yHi();
+                        int w = Head.this.W(), hY = Head.this.y();
+                        if (y1 > y || y2 < y) {return UC.noBid;}
+                        int hL = Head.this.time.x, hR = hL + W();
+                        if (x < hL - w || x > hR + w) { return UC.noBid; }
+                        if (x < hL + w/2) { return hL - x; }
+                        if (x > hR - w/2) { return x - hR; }
+                        return UC.noBid;
+                    }
+
+                    public void act(Gesture g) {
+                        int x = g.vs.xMid(), y1 = g.vs.yLow(), y2 = g.vs.yHi();
+                        Staff staff = Head.this.staff;
+                        Time time = Head.this.time;
+                        int w = Head.this.W();
+                        boolean up = x > time.x + w/2;
+                        if (Head.this.stem == null) {
+                            time.stemHeads(staff, up, y1, y2);
+                        } else{
+                            time.unStemHeads(y1, y2);
+                        }
+                    }
+                });
+
             }
 
             public void show(Graphics g) {
                 int h = staff.H();
-                Glyph.HEAD_Q.showAt(g, h, time.x,line*h + staff.yTop());
+//                Glyph.HEAD_Q.showAt(g, h, time.x,line*h + staff.yTop());
+                ((forcedGlyph != null)? forcedGlyph: normalGlyph()).showAt(g, h, x(), y());
+                if (stem != null) {
+                    int offSet = UC.restFirstDot;
+                }
             }
 
-            public int W(){
-                return (25*staff.H())/10;
+            public void joinStem(Stem s){
+                unStem();
+                s.heads.add(this);
+                stem = s;
+            }
+
+            public void unStem(){
+                if (stem == null){return;}
+                stem.heads.remove(this);
+                if (stem.heads.size() == 0){
+                    stem.deleteStem();
+                }
+                stem = null;
+            }
+
+            public int x(){
+                if (stem == null || stem.heads.size() == 0|| !wrongSide){ return time.x; }
+                return time.x + (stem.isUp? W(): -W());
+            }
+
+            public int y(){
+                return staff.yLine(line);
+            }
+
+            public Glyph normalGlyph(){
+                if(stem == null) {return Glyph.HEAD_Q;}
+                if(stem.nFlags == -2) {return Glyph.HEAD_W;}
+                if(stem.nFlags == -1) {return Glyph.HEAD_HALF;}
+                return Glyph.HEAD_Q;
+            }
+
+            public int W(){ return (24*staff.H())/10; }
+
+            public void deleteHead(){
+                time.heads.remove(this);
+                deleteMass();
+            }
+
+            public int compareTo(Head h) {
+                return (staff.ndx != h.staff.ndx)? (staff.ndx - h.staff.ndx): (line - h.line);
+            }
+        }
+
+        public static class Stem extends Duration{
+            public ArrayList<Head> heads = new ArrayList<>();
+            public boolean isUp = true;
+            public Staff staff;
+
+            public Stem(Staff staff, boolean up, Time time){
+                super(time);
+                this.staff = staff;
+                isUp = up;
+            }
+
+            public void deleteStem(){
+                deleteMass();
+            }
+
+            public void show(Graphics g) {
+                if(nFlags > -2 && heads.size() > 0){
+                    int x = x(), yH = yFirstHead(), yB = yBeamEnd();
+                    g.drawLine(x, yH, x, yB);
+                }
+
+            }
+            //helper
+            public Head FirstHead(){
+                return heads.get(isUp? heads.size()-1: 0);
+            }
+            //helper
+            public Head lastHead(){
+                return heads.get(isUp? 0: heads.size()-1);
+            }
+
+            public int yFirstHead(){
+                Head h = FirstHead();
+                return h.staff.yLine(h.line);
+            }
+
+            public int x(){
+                Head h = FirstHead();
+                return h.time.x + (isUp? h.W(): 0);
+            }
+
+            public int yBeamEnd(){
+                Head h = lastHead();
+                int line = h.line;
+                line += isUp? -7: 7;
+                int flagInc = (nFlags > 2)? 2*(nFlags-2): 0;
+                line += isUp? -flagInc: flagInc;
+                if((isUp && line > 4) || (!isUp && line < 4)){
+                    line = 4;
+                }
+                return staff.yLine(line);
+            }
+
+            public void setWrongSide(){
+                Collections.sort(heads);
+                int i, last, next;
+                if (isUp){
+                    i = heads.size()-1;
+                    last = 0;
+                    next = -1;
+                }else{
+                    i = 0;
+                    last = heads.size()-1;
+                    next = 1;
+                }
+                Head pH = heads.get(i);
+                pH.wrongSide = false;
+                while (i != last){
+                    i += next;
+                    Head nH = heads.get(i);
+                    nH.wrongSide = nH.staff == pH.staff && Math.abs(nH.line-pH.line) == 1 && !pH.wrongSide;
+                    pH = nH;
+                }
             }
 
         }

@@ -17,5 +17,7 @@ public class UC {
     public static int barToMarginSnap = 20;
     public static String FontName = "sinfonia";
     public static int snapTime = 20;
+    public static int restFirstDot = 40;
+    public static int dotSpace = 20;
 
 }

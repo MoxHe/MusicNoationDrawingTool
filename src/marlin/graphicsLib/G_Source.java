@@ -60,12 +60,12 @@
 //        public void fill(Graphics g, Color c){ g.setColor(c);g.fillRect(loc.x,loc.y,size.x,size.y); }
 //        public boolean hit(int x,int y){return loc.x <= x && loc.y<= y && x<=(loc.x+size.x) && y<=(loc.y+size.y);}
 //        public void resize(int x,int y){size.x = x;size.y = y;}
-//        public int lox(){return loc.x;}
-//        public int midx(){return loc.x+size.x/2;}
-//        public int hix(){return loc.x+size.x;}
-//        public int loy(){return loc.y;}
-//        public int midy(){return loc.y+size.y/2;}
-//        public int hiy(){return loc.y+size.y;}
+//        public int xLow(){return loc.x;}
+//        public int xMid(){return loc.x+size.x/2;}
+//        public int xHi(){return loc.x+size.x;}
+//        public int yLow(){return loc.y;}
+//        public int yMid(){return loc.y+size.y/2;}
+//        public int yHi(){return loc.y+size.y;}
 //
 //
 //
