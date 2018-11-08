@@ -18,6 +18,6 @@ public class UC {
     public static String FontName = "sinfonia";
     public static int snapTime = 20;
     public static int restFirstDot = 40;
-    public static int dotSpace = 20;
+    public static int dotSpace = 10;
 
 }

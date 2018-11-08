@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="951ff780-8a2a-48e8-ac64-e438ff6f6d08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Mass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Mass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$Box$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$Box$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$Box$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$Box$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Squares$Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Squares$Square.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/UC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/UC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$VS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$VS.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar.class" afterDir="false" />
@@ -31,14 +29,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Time$List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Time$List.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Time.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Time.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Reaction/Mass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/Reaction/Mass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/SimpleReaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/Sandbox/SimpleReaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/Squares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/Sandbox/Squares.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/marlin/UC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/UC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/graphicsLib/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/graphicsLib/G.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/graphicsLib/G_Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/graphicsLib/G_Source.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/marlin/music/Music1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/marlin/music/Music1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,7 +43,7 @@
     <session id="1454898214">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
@@ -74,13 +65,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="30839" />
+          <entry key="java" value="33029" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="30839" />
+          <entry key="JAVA" value="33029" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -91,12 +82,28 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/marlin/music/Music1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="545" column="49" selection-start-line="545" selection-start-column="49" selection-end-line="545" selection-end-column="49" />
+            <state relative-caret-position="548">
+              <caret line="779" column="44" selection-start-line="779" selection-start-column="44" selection-end-line="779" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#22530#22531#0" expanded="true" />
-                <element signature="e#22574#22575#0" expanded="true" />
+                <element signature="e#21154#21155#0" expanded="true" />
+                <element signature="e#21257#21258#0" expanded="true" />
+                <element signature="e#22379#22380#0" expanded="true" />
+                <element signature="e#22435#22436#0" expanded="true" />
+                <element signature="e#23987#23988#0" expanded="true" />
+                <element signature="e#24043#24044#0" expanded="true" />
+                <element signature="e#24673#24674#0" expanded="true" />
+                <element signature="e#24740#24741#0" expanded="true" />
+                <element signature="e#25284#25285#0" expanded="true" />
+                <element signature="e#25357#25358#0" expanded="true" />
+                <element signature="e#25414#25415#0" expanded="true" />
+                <element signature="e#25487#25488#0" expanded="true" />
+                <element signature="e#27828#27829#0" expanded="true" />
+                <element signature="e#27868#27869#0" expanded="true" />
+                <element signature="e#28387#28388#0" expanded="true" />
+                <element signature="e#28437#28438#0" expanded="true" />
+                <element signature="e#28788#28789#0" expanded="true" />
+                <element signature="e#28832#28833#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/marlin/UC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="400">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -212,7 +219,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Fmt</find>
       <find>drawLines</find>
       <find>toggleBar</find>
       <find>addReac</find>
@@ -234,14 +240,15 @@
       <find>public Head</find>
       <find>class TIME</find>
       <find>stemHeads</find>
-      <find>deleteStem</find>
       <find>delete</find>
       <find>Stem</find>
-      <find>class Stem</find>
       <find>return time.x</find>
       <find>hiX</find>
       <find>setWr</find>
       <find>class Head</find>
+      <find>class Sys</find>
+      <find>deleteStem</find>
+      <find>class Stem</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -354,7 +361,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541617422342" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541624697237" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -413,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541010079055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1541617461410</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541617461410</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -426,10 +440,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10085837" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07507987" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -438,15 +452,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49284694" visible="true" weight="0.15301205" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4909478" weight="0.12574257" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5071531" side_tool="true" visible="true" weight="0.15301205" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50905216" side_tool="true" visible="true" weight="0.15247525" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49785408" weight="0.32771084" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49356222" weight="0.16746987" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -681,19 +695,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/marlin/UC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="400">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/marlin/music/Music1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="545" column="49" selection-start-line="545" selection-start-column="49" selection-end-line="545" selection-end-column="49" />
+        <state relative-caret-position="548">
+          <caret line="779" column="44" selection-start-line="779" selection-start-column="44" selection-end-line="779" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#22530#22531#0" expanded="true" />
-            <element signature="e#22574#22575#0" expanded="true" />
+            <element signature="e#21154#21155#0" expanded="true" />
+            <element signature="e#21257#21258#0" expanded="true" />
+            <element signature="e#22379#22380#0" expanded="true" />
+            <element signature="e#22435#22436#0" expanded="true" />
+            <element signature="e#23987#23988#0" expanded="true" />
+            <element signature="e#24043#24044#0" expanded="true" />
+            <element signature="e#24673#24674#0" expanded="true" />
+            <element signature="e#24740#24741#0" expanded="true" />
+            <element signature="e#25284#25285#0" expanded="true" />
+            <element signature="e#25357#25358#0" expanded="true" />
+            <element signature="e#25414#25415#0" expanded="true" />
+            <element signature="e#25487#25488#0" expanded="true" />
+            <element signature="e#27828#27829#0" expanded="true" />
+            <element signature="e#27868#27869#0" expanded="true" />
+            <element signature="e#28387#28388#0" expanded="true" />
+            <element signature="e#28437#28438#0" expanded="true" />
+            <element signature="e#28788#28789#0" expanded="true" />
+            <element signature="e#28832#28833#0" expanded="true" />
           </folding>
         </state>
       </provider>
