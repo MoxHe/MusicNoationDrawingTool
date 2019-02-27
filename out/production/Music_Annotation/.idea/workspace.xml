@@ -2,138 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="951ff780-8a2a-48e8-ac64-e438ff6f6d08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/I.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/APP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Bar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Beam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Duration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Glyph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Head.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Rest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Stem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Sys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Music/Time.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/Music1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/Music2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/Spline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShapeDB.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/marlin2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Music_Annotation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/ShapeDB.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/I$Act.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/I$Area.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/I$React.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/I$Show.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/I.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Gesture$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Gesture$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Gesture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Ink$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Ink$Buffer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Ink$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Ink$Norm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Ink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Layer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Mass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Reaction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Reaction$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Reaction$Map.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Reaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Shape$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Shape$Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Shape$Prototype$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Shape$Prototype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Reaction/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Paint$Path.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Paint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/PaintInk.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/ShapeTrainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$Box$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$Box$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction$Box.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/SimpleReaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Squares$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Squares$Square$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Squares$Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/Sandbox/Squares.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/UC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$BBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$LoHi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$PL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$V$Transform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$V.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G$VS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/Window$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/graphicsLib/Window.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Glyph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Bar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Duration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Head$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Head$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Head.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Rest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Rest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Rest$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Rest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff$Fmt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Staff.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Stem$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Stem$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Stem$Beam.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Stem$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Stem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys$Fmt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Sys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Time$List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music$Time.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1$Music.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin/music/Music1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/marlin2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/marlin2/sinfonia.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/I.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Reaction/Gesture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Reaction/Gesture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Reaction/Ink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Reaction/Ink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Reaction/Layer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Reaction/Layer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Reaction/Mass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Reaction/Mass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Reaction/Reaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Reaction/Reaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Reaction/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Reaction/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/Paint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/Paint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/PaintInk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/PaintInk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/ShapeTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/ShapeTrainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/SimpleReaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/SimpleReaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/Sandbox/Squares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/Sandbox/Squares.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/UC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/UC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/graphicsLib/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/graphicsLib/G.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/graphicsLib/G_Source.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/graphicsLib/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music_Annotation/graphicsLib/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/music/Glyph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/marlin/music/Music1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Music_Annotation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Music_Annotation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Music_Annotation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Music_Annotation/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="171">
               <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -171,17 +42,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Music/Staff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="95">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/Music2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="132" column="21" lean-forward="true" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+            <state relative-caret-position="2166">
+              <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/Music1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="65" column="60" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -189,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Music_Annotation/UC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="228">
               <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
             </state>
           </provider>
@@ -198,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Music/Head.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="1254">
               <caret line="71" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
@@ -207,17 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/ShapeTrainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
+            <state relative-caret-position="285">
               <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Reaction/Mass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -234,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Reaction/Gesture.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
+            <state relative-caret-position="304">
               <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
@@ -251,7 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tempArr</find>
       <find>unStemH</find>
       <find>public static class Stem</find>
       <find>public void act</find>
@@ -281,6 +151,7 @@
       <find>name is</find>
       <find>E-S</find>
       <find>addRea</find>
+      <find>E-W</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -359,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,7 +274,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -465,7 +336,8 @@
       <workItem from="1550518136833" duration="259000" />
       <workItem from="1551139041108" duration="88000" />
       <workItem from="1551139160381" duration="175000" />
-      <workItem from="1551139565012" duration="1844000" />
+      <workItem from="1551139565012" duration="2622000" />
+      <workItem from="1551293637690" duration="294000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1541010079055</created>
@@ -485,7 +357,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17895000" />
+    <option name="totallyTimeSpent" value="18967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,7 +372,7 @@
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49686846" visible="true" weight="0.20113085" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49686846" visible="true" weight="0.20436187" />
       <window_info id="Structure" order="1" sideWeight="0.50364965" side_tool="true" weight="0.18659128" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -625,13 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/Music1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/Paint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -674,34 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Reaction/Reaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/UC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Music/Head.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/ShapeTrainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -720,16 +557,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Reaction/Gesture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="171">
           <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -746,15 +576,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Music/Staff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="95">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/Music2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="132" column="21" lean-forward="true" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+        <state relative-caret-position="2166">
+          <caret line="130" column="59" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/UC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Music/Head.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/ShapeTrainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Reaction/Reaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Reaction/Gesture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Music_Annotation/Sandbox/Music1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="65" column="60" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="60" />
         </state>
       </provider>
     </entry>
