@@ -23,3 +23,7 @@ By using different mouse dragging gesture, the user can paint the music tabs on 
    c. Draw the line with one drag.
 
    d. Press ```Enter``` to confirm the gesture and continue the next.
+   
+####    Demo
+![demo](./demo.gif)
+
