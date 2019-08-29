@@ -22,7 +22,7 @@ public class Squares extends Window implements ActionListener {
     public static Timer timer;
     public static G.VS theVS = new G.VS(100,100,200,300);
     public static Color theCOLOR = G.rndColor();
-    public static Square.List theList = new Square.List();
+    public static Square.List theList = new Square.List();;
     public static Square backgroundSquare = new Square(0,0){
 
 
